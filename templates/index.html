@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1>📚 Sistema de Biblioteca</h1>
+    <ul>
+        <li><a href="{{ url_for('cadastrar_livro') }}">Cadastrar Livro</a></li>
+        <li><a href="{{ url_for('cadastrar_usuario') }}">Cadastrar Usuário</a></li>
+        <li><a href="{{ url_for('realizar_emprestimo') }}">Fazer Empréstimo</a></li>
+        <li><a href="{{ url_for('registrar_devolucao') }}">Registrar Devolução</a></li>
+        <li><a href="{{ url_for('listar_livros') }}">Listar Livros Disponíveis</a></li>
+        <li><a href="{{ url_for('listar_emprestimos') }}">Listar Livros Emprestados</a></li>
+        <li><a href="{{ url_for('listar_usuarios') }}">Listar Usuários</a></li>
+    </ul>
+</body>
+</html>

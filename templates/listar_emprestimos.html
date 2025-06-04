@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Livros Emprestados</title>
+</head>
+<body>
+    <h1>📕 Livros Emprestados</h1>
+    <ul>
+        {% for item in emprestimos %}
+            <li>{{ item.titulo }} — emprestado por {{ item.nome }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">⬅ Voltar</a></p>
+</body>
+</html>

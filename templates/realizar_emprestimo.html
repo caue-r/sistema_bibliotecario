@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Realizar Empréstimo</title>
+</head>
+<body>
+    <h1>📖 Realizar Empréstimo</h1>
+    <form action="/emprestimos/novo" method="POST">
+        <label>Livro (ISBN - Título):</label><br>
+        <select name="isbn" required>
+            {% for livro in livros %}
+                <option value="{{ livro.isbn }}">{{ livro.isbn }} - {{ livro.titulo }}</option>
+            {% endfor %}
+        </select><br><br>
+    
+        <label>Usuário (ID - Nome):</label><br>
+        <select name="usuario_id" required>
+            {% for usuario in usuarios %}
+                <option value="{{ usuario.id }}">{{ usuario.id }} - {{ usuario.nome }}</option>
+            {% endfor %}
+        </select><br><br>
+    
+        <input type="submit" value="Emprestar">
+    </form>
+
+    <p><a href="/">⬅ Voltar ao início</a></p>
+</body>
+</html>

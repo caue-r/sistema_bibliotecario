@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Livros Disponíveis</title>
+</head>
+<body>
+    <h1>📚 Livros Disponíveis</h1>
+    <ul>
+        {% for livro in livros %}
+            <li>{{ livro.titulo }} (ISBN: {{ livro.isbn }})</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">⬅ Voltar</a></p>
+</body>
+</html>

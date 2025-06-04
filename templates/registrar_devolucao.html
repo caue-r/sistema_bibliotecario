@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Devolução</title>
+</head>
+<body>
+    <h1>🔁 Registrar Devolução</h1>
+
+    {% if emprestimos %}
+    <form action="/emprestimos/devolver" method="POST">
+        <label>Selecione um Empréstimo:</label><br>
+        <select name="emprestimo_id" required>
+            {% for e in emprestimos %}
+                <option value="{{ e['id'] }}">
+                    {{ e['id'] }} — {{ e['livro_titulo'] }} ({{ e['usuario_nome'] }})
+                </option>
+            {% endfor %}
+        </select>
+        
+        <br><br>
+
+        <input type="submit" value="Registrar Devolução">
+    </form>
+    {% else %}
+        <p>📭 Nenhum empréstimo ativo para devolver.</p>
+    {% endif %}
+
+    <p><a href="/">⬅ Voltar ao início</a></p>
+</body>
+</html>
